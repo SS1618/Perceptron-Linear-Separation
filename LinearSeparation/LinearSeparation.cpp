@@ -19,9 +19,28 @@ int main()
 	double sum;
 	double bias = 1;
 	double sigFunc;
-	double cost;
+	//double cost;
 	double rate = 0.1;
 	int output;
+	for (int j = 0; j < 10; j++) {
+		for (int i = 0; i < 4; i++) {
+			input[0] = bias;
+			input[1] = test[i][0];
+			input[2] = test[i][1];
+			sum = (weight[1] * input[1]) + (weight[0] * input[0]) - (weight[2] * input[2]);
+			sigFunc = 1 / (1 + exp(-sum));
+			if (sigFunc > 0.5) {
+				output = 1;
+			}
+			else {
+				output = 0;
+			}
+			cout << "Output: " << output << endl;
+			
+		}
+	}
+	cout << "(" << weight[1] << ")x1 - (" << weight[2] << ")x2 + " << weight[0] << endl;
+	cin.ignore();
 	return 0;
 }
 double dot(double A[], double B[], int length) {
