@@ -8,6 +8,20 @@ using namespace std;
 double dot(double A[], double B[], int length);
 int main()
 {
+	double test[4][3] = {
+		{1,1,1},
+		{0,1,0},
+		{1,0,0},
+		{0,0,0}
+	};
+	double input[3]; //0 = bias
+	double weight[3] = { 1,1,1 }; //0 = bias weight
+	double sum;
+	double bias = 1;
+	double sigFunc;
+	double cost;
+	double rate = 0.1;
+	int output;
 	return 0;
 }
 double dot(double A[], double B[], int length) {
