@@ -3,10 +3,19 @@
 
 #include "pch.h"
 #include <iostream>
-
+#include "math.h"
+using namespace std;
+double dot(double A[], double B[], int length);
 int main()
 {
 	return 0;
+}
+double dot(double A[], double B[], int length) {
+	double product = 0;
+	for (int i = 0; i < length; i++) {
+		product += (B[i] * A[i]);
+	}
+	return product;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
