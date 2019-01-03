@@ -36,7 +36,9 @@ int main()
 				output = 0;
 			}
 			cout << "Output: " << output << endl;
-			
+			weight[0] += ((test[i][2] - output)*rate*input[0]);
+			weight[1] += ((test[i][2] - output)*rate*input[1]);
+			weight[2] -= ((test[i][2] - output)*rate*input[2]);
 		}
 	}
 	cout << "(" << weight[1] << ")x1 - (" << weight[2] << ")x2 + " << weight[0] << endl;
